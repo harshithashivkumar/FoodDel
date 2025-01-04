@@ -62,7 +62,7 @@ const PlaceOrder = () => {
     navigate("/payment"); // Navigate to payment page
   };
 
-  const deliveryFee = getTotalCartAmount() === 0 ? 0 : 29;
+  const deliveryFee = getTotalCartAmount() === 0 ? 0 : 2;
   const total = getTotalCartAmount() + deliveryFee;
 
   return (

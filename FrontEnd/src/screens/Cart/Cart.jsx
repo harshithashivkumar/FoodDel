@@ -29,7 +29,7 @@ const Cart = () => {
                 <div className="cart-items-title">
                   <img src={`${url}/images/${food.image}`} alt={food.name} />
                   <p>{food.name}</p>
-                  <p>₹{food.price}</p>
+                  <p>${food.price}</p>
                   <div className="quantity-counter">
                     <img
                       src={assets.remove_icon_red}
@@ -43,7 +43,7 @@ const Cart = () => {
                       alt="Add"
                     />
                   </div>
-                  <p>&#8377;{cartItems[food._id] * food.price}</p>
+                  <p>${cartItems[food._id] * food.price}</p>
                 </div>
                 <hr />
               </div>
@@ -56,18 +56,18 @@ const Cart = () => {
           <div className="cart-total-box">
             <div className="cart-total-details">
               <p>Subtotal</p>
-              <p>&#8377;{getTotalCartAmount()}</p>
+              <p>${getTotalCartAmount()}</p>
             </div>
             <hr />
             <div className="cart-total-details">
               <p>Delivery Fee</p>
-              <p>&#8377;{getTotalCartAmount() === 0 ? 0 : 29}</p>
+              <p>${getTotalCartAmount() === 0 ? 0 : 29}</p>
             </div>
             <hr />
             <div className="cart-total-details">
               <p>Total</p>
               <p>
-                &#8377;{getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 29}
+                ${getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 29}
               </p>
             </div>
           </div>
