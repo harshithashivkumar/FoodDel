@@ -1,5 +1,5 @@
 
-const allowedOrigins = ['http://localhost:5173','http://localhost:5174','https://fooddeladmin-q8zl.onrender.com']
+const allowedOrigins = ['https://fooddelfrontend.onrender.com','https://fooddeladmin-q8zl.onrender.com']
 
 const corsOptions ={
     origin: (origin,callback)=>{
