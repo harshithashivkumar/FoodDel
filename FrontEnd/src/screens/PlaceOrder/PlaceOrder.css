@@ -5,6 +5,7 @@
   justify-content: space-between;
   padding: 20px;
   font-family: Arial, sans-serif;
+  flex-wrap: wrap; /* Ensures wrapping for smaller screens */
 }
 
 .delivery-info,
@@ -13,7 +14,8 @@
   border-radius: 10px;
   padding: 20px;
   background-color: #fafafa;
-  width: 48%; 
+  width: 48%; /* Keeps equal width for larger screens */
+  box-sizing: border-box;
 }
 
 .delivery-info h2,
@@ -25,16 +27,17 @@
 .delivery-info form {
   display: flex;
   flex-direction: column;
-  gap: 20px; 
+  gap: 20px;
 }
 
 .row {
   display: flex;
-  gap: 15px; 
+  gap: 15px;
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
 }
 
 .row input {
-  width: calc(50% - 7.5px); 
+  width: calc(50% - 7.5px); /* Adjusts input width */
   padding: 12px;
   font-size: 14px;
   border: 1px solid #ccc;
@@ -52,15 +55,8 @@
 
 .delivery-info input:focus {
   outline: none;
-  border-color: #d0ff00; 
+  border-color: #d0ff00;
   box-shadow: 0 0 5px rgba(255, 75, 43, 0.5);
-}
-
-.cart-totals {
-  border: 1px solid #eee;
-  border-radius: 10px;
-  padding: 20px;
-  background-color: #fafafa;
 }
 
 .cart-total-details {
@@ -90,18 +86,70 @@
   background-color: #bf3821;
 }
 
-
-button{
+button {
   background: transparent;
   padding: 10px 20px;
   color: rgb(0, 0, 0);
   border: 2px solid #000000;
-  border-radius:50px;
-  cursor:pointer;
-  transition:0.3s;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
 }
-button:hover{
+
+button:hover {
   border: 2px solid #ff4d00;
   background-color: #ff4d00;
   color: #ffffff;
+}
+
+/* Responsive Design for Tablets */
+@media screen and (max-width: 768px) {
+  .place-order {
+    flex-direction: column;
+    align-items: center; /* Centers content for better alignment */
+    gap: 20px; /* Adds spacing between sections */
+  }
+
+  .delivery-info,
+  .cart-totals {
+    width: 90%; /* Full width for smaller screens */
+  }
+}
+
+/* Responsive Design for Mobiles */
+@media screen and (max-width: 480px) {
+  .row {
+    flex-direction: column; /* Stacks inputs vertically */
+    gap: 10px; /* Reduces gap for small screens */
+  }
+
+  .row input {
+    width: 100%; /* Full width for inputs */
+  }
+
+  .cart-total-details {
+    flex-direction: column; /* Aligns text vertically */
+    text-align: left; /* Adjusts alignment for readability */
+  }
+
+  .cart-totals button {
+    width: 100%; /* Full width for button */
+  }
+}
+
+/* Extra Small Screens */
+@media screen and (max-width: 320px) {
+  .place-order {
+    padding: 10px; /* Reduces padding */
+  }
+
+  .delivery-info h2,
+  .cart-totals h2 {
+    font-size: 1.2em; /* Adjusts font size */
+  }
+
+  button {
+    padding: 8px 15px; /* Adjusts button padding */
+    font-size: 0.9em; /* Smaller font size for buttons */
+  }
 }
