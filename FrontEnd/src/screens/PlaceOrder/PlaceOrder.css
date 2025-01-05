@@ -105,3 +105,19 @@ button:hover{
   background-color: #ff4d00;
   color: #ffffff;
 }
+
+@media screen and (max-width: 768px) {
+  .place-order {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 400px) {
+  .place-order {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 268px) {
+  .place-order {
+    flex-direction: column;
+  }
+}
