@@ -7,9 +7,6 @@
     display: grid;
 }
 
-span{
-    cursor: pointer;
-}
 .login-popup-container{
     place-self:center;
     width: max(23vw,330px);
@@ -84,4 +81,19 @@ span{
 }
 .extra{
     margin-top: -15px;
+}
+
+.login-popup-condition p span,
+.login-popup p span {
+    cursor: pointer;
+    color: #ff4d00;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.login-popup-condition p span:hover,
+.login-popup p span:hover {
+    color: #ff4d00; /* Keeps the same color but enhances hover feedback */
+    text-shadow: 0px 0px 5px #ff4d00;
 }
