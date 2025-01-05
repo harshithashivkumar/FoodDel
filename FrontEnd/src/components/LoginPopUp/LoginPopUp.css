@@ -93,6 +93,6 @@
 
 .login-popup-condition p span:hover,
 .login-popup p span:hover {
-    color: #ff4d00; /* Keeps the same color but enhances hover feedback */
+    color: #000000; /* Keeps the same color but enhances hover feedback */
     text-shadow: 0px 0px 5px #3cff00;
 }
