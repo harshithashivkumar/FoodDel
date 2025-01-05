@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
 .place-order {
   margin-top: 100px;
   margin-bottom: 150px;
@@ -14,8 +18,9 @@
   border-radius: 10px;
   padding: 20px;
   background-color: #fafafa;
-  width: 48%; /* Keeps equal width for larger screens */
+  width: 48%; /* Keeps both divs equal width */
   box-sizing: border-box;
+  min-width: 300px; /* Ensures both sections maintain a reasonable width */
 }
 
 .delivery-info h2,
@@ -33,21 +38,22 @@
 .row {
   display: flex;
   gap: 15px;
-  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+  flex-wrap: nowrap; /* Prevents wrapping for inputs */
 }
 
 .row input {
-  width: calc(50% - 7.5px); /* Adjusts input width */
-  padding: 12px;
+  width: calc(50% - 7.5px); /* Maintains size proportional to desktop */
+  padding: 10px;
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  box-sizing: border-box;
 }
 
 .delivery-info input {
   background: transparent;
   color: rgb(54, 52, 52);
-  padding: 12px;
+  padding: 10px;
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -102,50 +108,50 @@ button:hover {
   color: #ffffff;
 }
 
-/* Responsive Design for Tablets */
+/* Responsive Design for Mobiles */
 @media screen and (max-width: 768px) {
   .place-order {
     flex-direction: column;
-    align-items: center; /* Centers content for better alignment */
+    align-items: center;
     gap: 20px; /* Adds spacing between sections */
   }
 
   .delivery-info,
   .cart-totals {
-    width: 90%; /* Full width for smaller screens */
+    width: 100%; /* Full width for smaller screens */
+    max-width: 600px; /* Keeps layout consistent with desktop view */
   }
-}
 
-/* Responsive Design for Mobiles */
-@media screen and (max-width: 480px) {
   .row {
-    flex-direction: column; /* Stacks inputs vertically */
-    gap: 10px; /* Reduces gap for small screens */
+    gap: 10px; /* Reduces spacing for inputs */
   }
 
   .row input {
-    width: 100%; /* Full width for inputs */
-  }
-
-  .cart-total-details {
-    flex-direction: column; /* Aligns text vertically */
-    text-align: left; /* Adjusts alignment for readability */
+    width: calc(50% - 5px); /* Maintains input size similar to desktop */
   }
 
   .cart-totals button {
-    width: 100%; /* Full width for button */
+    width: 80%; /* Adjusts button size for readability */
   }
 }
 
 /* Extra Small Screens */
-@media screen and (max-width: 320px) {
-  .place-order {
-    padding: 10px; /* Reduces padding */
+@media screen and (max-width: 480px) {
+  .delivery-info form {
+    gap: 15px; /* Adjusts form spacing */
   }
 
-  .delivery-info h2,
-  .cart-totals h2 {
-    font-size: 1.2em; /* Adjusts font size */
+  .row {
+    gap: 8px; /* Minimizes gap between inputs */
+  }
+
+  .row input {
+    width: calc(50% - 4px); /* Slightly smaller inputs */
+    padding: 8px; /* Adjusted padding */
+  }
+
+  .cart-totals button {
+    width: 100%; /* Full width button for smaller devices */
   }
 
   button {
