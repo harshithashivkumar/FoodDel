@@ -86,7 +86,7 @@
 .login-popup-condition p span,
 .login-popup p span {
     cursor: pointer;
-    color: #ff4d00;
+    color: #ff0000;
     font-weight: bold;
     transition: color 0.3s ease;
 }
