@@ -121,3 +121,18 @@ button:hover{
     flex-direction: column;
   }
 }
+@media screen and (min-width: 768px) {
+  .place-order {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 400px) {
+  .place-order {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 268px) {
+  .place-order {
+    flex-direction: column;
+  }
+}
